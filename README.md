@@ -36,6 +36,7 @@ Here there was quite a smooth descend into the minimum. Achieving a minimised lo
 It achieves closer point at -860.87, however at a significantly slower pace with 999 iterations instead. This is due to the smaller step size. If we limited the iterations to 100, the algorithm would have stopped prematurely.
 
 
+**Plain Vanilla Experiment Result Table** 
 
  No.|Eta| Converged Steps | Achieved Coordinates | Loss fn
 ------------ | ------------ | ----------- |------------- | -------------
@@ -56,6 +57,8 @@ We first initialize our weights at (400.1,400.1) in the ravine loss surface (egg
 
 Besides, if the stepsize set to be too large (eta1), although the gradient descend converges the earliest, it cannot reach to a minimum as low as the others. This is because large step size can pass over the true minimum and bounce back to higher point (-888.95). Similarly, if the step size too small (eta3), it requests the same number of step size as PV approach to achieve the global minima (-955.25) which results in a higher computational cost.
 
+**Momentum Experiment Result Table** 
+
  No.|Eta| Converged Steps | Achieved Coordinates | Loss fn
 ------------ | ------------ | ----------- |------------- | -------------
 1|1.5 | 115 | (347.33, 499.42) |-888.95
@@ -71,14 +74,19 @@ Adaptive Moment Estimation (Adam) multiply a positive factor to the learning rat
 
 Based on results of our experiments, the Adam approach has much higher computational cost compare to Momentum. With the same learning rate eta1(6.5) eta2(0.3） eta3（0.005) and same initialised weights at (400.1,400.1), it takes 1894 steps to reach the same global minima(-935.33) whereas momentum only takes 117 steps. This might due to the complication of the Egg holder surface contains multi-minima bottom points.
 
+**Adam Experiment Result Table** 
+
  No.|Eta| Converged Steps | Achieved Coordinates | Loss fn
 ------------ | ------------ | ----------- |------------- | -------------
 1|10.5 | 216 | (439.48, 453.98) |-935.34
 2|6.5 | 236| (439.48, 453.98)  |-935.34
 3|0.5 | 773| (439.48, 453.98)  |-935.34
+
 # 3. Conclusion
 ![3_in_one_gif](ezgif.com-video-to-gif.gif)
 ![3_in_one_graph](3_in_1_GD.png)
+
+**Experiment Result Comparison Table** 
 
  Type of GD|Eta| Converged Steps | Achieved Coordinates | Loss fn
 ------------ | ------------ | ----------- |------------- | -------------
