@@ -20,11 +20,11 @@ This project aims to explore the global minimum of egg holder function with diff
 The following variant of gradient descent have been used in our project.
 
 ## 2.1 Plain Vanilla
-Eta | Converged Steps | Achieved Coordinates | Loss fn
+| Converged Steps | Achieved Coordinates | Loss fn
 ------------ | ----------- |------------- | -------------
-6.5 | 999 | (200.89,536.18) |-624.78
-0.3 | 231| (439.48,453.98) |-935.34 
-0.005 | 999| (419.41,434.65) |-860.87
+Eta1|6.5 | 999 | (200.89,536.18) |-624.78
+Eta2|0.3 | 231| (439.48,453.98) |-935.34 
+Eta3|0.005 | 999| (419.41,434.65) |-860.87
 ## 2.2 Momentum 
 Reference: https://medium.com/@hengluchang/visualizing-gradient-descent-with-momentum-in-python-7ef904c8a847
 
