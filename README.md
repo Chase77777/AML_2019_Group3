@@ -53,10 +53,12 @@ Based on results of our experiments, the Adam approach has much higher computati
 # 3. Conclusion
 ![3_in_one_gif](ezgif.com-video-to-gif.gif)
 ![3_in_one_graph](3_in_1_GD.png)
+
  Type of GD|Eta| Converged Steps | Achieved Coordinates | Loss fn
 ------------ | ------------ | ----------- |------------- | -------------
 Adam|0.3 |499 | (437.99,452.51)  |-934.91
 Momentum|0.3 |117| (439.48,453.98)   |-935.34
 Plain Vanilla|0.3| 231| (439.48,453.98)  |-935.34
+
 When we tried to plot 3 approaches (PV, Momentu, Adam) together with same learning rate 0.3 and initial point (400.1,400.1), we can conclude that Momentum has the best performance among other 2 methods. Momentum converged in 117 steps to reach the local minimum -935.33 whereas Adam preforms worse than PV which has the highest computational cost.
 
