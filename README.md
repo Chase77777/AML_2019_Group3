@@ -26,7 +26,14 @@ while a large learning rate (step size) could cause us to miss the minima and bo
 
 <p align="center"> <img src="Plain_Vanilla_GD.png" width="900" height="480"></p>
 
+**Large Learning Rate (Left plot)** 
+Due to the large step size, the path taken bounced around and missed the true minimum. It seems needs more steps to locate the local minimum.
 
+**Medium Learning Rate (Centre plot)** 
+Here there was quite a smooth descend into the minimum. Achieving a minimised loss function of -935.34 after 231 steps
+
+**Small Learning Rate (Right plot)** 
+It achieves closer point at -860.87, however at a significantly slower pace with 999 iterations instead. This is due to the smaller step size. If we limited the iterations to 100, the algorithm would have stopped prematurely.
 
 
 
@@ -43,6 +50,8 @@ while a large learning rate (step size) could cause us to miss the minima and bo
 
 Momentum (1964) make use of the moving averages of the gradient instead of just taking one value like in plain vanilla gradient descent. It can accumulate velocity in the direction where the gradient is pointing towards the same direction across iterations. It achieves this by adding a portion of the previous weight update to the current one.[Reference](https://medium.com/@hengluchang/visualizing-gradient-descent-with-momentum-in-python-7ef904c8a847)
 
+<p align="center"> <img src="Momentum_GD.png" width="900" height="480"></p>
+
 We first initialize our weights at (400.1,400.1) in the ravine loss surface (egg holder) we've created earlier. Then, we experiment with different learning rate eta1(6.5), eta2(0.3), eta3(0.005) run for 1000 iterations and see how it reach to the global minimum f(x)=-959.64, at x = (512, 404.23). Compares to Plain Vanilla approach (231 steps), it takes 114 less steps to reach the global minima (f(x)=-935.33, x= (439.48,453.98)) with 117 steps under same learning rate eta2 (0.3). This is due to momentum term increases for dimensions whose gradients point in the same directions and reduces updates for dimensions whose gradients change directions. As a result, it gains faster convergence and reduced oscillation. [Reference](http://ruder.io/optimizing-gradient-descent/index.html#momentum) 
 
 Besides, if the stepsize set to be too large (eta1), although the gradient descend converges the earliest, it cannot reach to a minimum as low as the others. This is because large step size can pass over the true minimum and bounce back to higher point (-888.95). Similarly, if the step size too small (eta3), it requests the same number of step size as PV approach to achieve the global minima (-955.25) which results in a higher computational cost.
@@ -57,6 +66,8 @@ Besides, if the stepsize set to be too large (eta1), although the gradient desce
 ## 2.3 Adam 
 
 Adaptive Moment Estimation (Adam) multiply a positive factor to the learning rate and moving averages of the gradient. In addition to storing an exponentially decaying average of past squared gradients vt, Adam also keeps an exponentially decaying average of past gradients mt similar to momentum. Whereas momentum can be seen as a ball running down a slope, Adam behaves like a heavy ball with friction, which thus prefers flat minima in the error surface We compute the decaying averages of past mt and past vt squared gradients. mt and vt are estimates of the first moment (the mean) and the second moment (the uncentered variance) of the gradients respectively, hence the name of the method. 
+
+<p align="center"> <img src="Adam_GD.png" width="900" height="480"></p>
 
 Based on results of our experiments, the Adam approach has much higher computational cost compare to Momentum. With the same learning rate eta1(6.5) eta2(0.3） eta3（0.005) and same initialised weights at (400.1,400.1), it takes 1894 steps to reach the same global minima(-935.33) whereas momentum only takes 117 steps. This might due to the complication of the Egg holder surface contains multi-minima bottom points.
 
