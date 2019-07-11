@@ -10,6 +10,11 @@ Gradient Descent for SMM284 An Introduction to Machine Learning
 
 For our Gradient Descent Project, we have decided to choose the **Egg Holder Function** to see how different gradient Descent works.
 
+### The Global Minimum for Egg Holder Function is as followed
+<p align="center">
+    <img src="egg3.png" alt="Egg Holder minimum" /></p>
+
+
 Reference: [Egg Holder Function Reference](https://www.sfu.ca/~ssurjano/egg.html)
 
 
@@ -53,7 +58,11 @@ Momentum (1964) make use of the moving averages of the gradient instead of just 
 
 <p align="center"> <img src="Momentum_GD.png" width="900" height="480"></p>
 
-We first initialize our weights at (400.1,400.1) in the ravine loss surface (egg holder) we've created earlier. Then, we experiment with different learning rate eta1(6.5), eta2(0.3), eta3(0.005) run for 1000 iterations and see how it reach to the global minimum f(x)=-959.64, at x = (512, 404.23). Compares to Plain Vanilla approach (231 steps), it takes 114 less steps to reach the global minima (f(x)=-935.33, x= (439.48,453.98)) with 117 steps under same learning rate eta2 (0.3). This is due to momentum term increases for dimensions whose gradients point in the same directions and reduces updates for dimensions whose gradients change directions. As a result, it gains faster convergence and reduced oscillation. [Reference](http://ruder.io/optimizing-gradient-descent/index.html#momentum) 
+We first initialize our weights at **(400.1,400.1)** in the ravine loss surface (*Egg holder Function*). 
+
+Then, we experiment with different learning rate **eta1(6.5), eta2(0.3),and eta3(0.005)** for 1000 iterations and see how it reach to the global minimum **f(x)=-959.64, at x = (512, 404.23)**. 
+
+Compares to Plain Vanilla approach *(231 steps)*, it takes **114 less steps** to reach the global minima with **117 steps** under same learning rate **eta2 (0.3)**. This is due to momentum term increases for dimensions whose gradients point in the same directions and reduces updates for dimensions whose gradients change directions. As a result, it gains faster convergence and reduced oscillation. [Reference](http://ruder.io/optimizing-gradient-descent/index.html#momentum) 
 
 Besides, if the stepsize set to be too large (eta1), although the gradient descend converges the earliest, it cannot reach to a minimum as low as the others. This is because large step size can pass over the true minimum and bounce back to higher point (-888.95). Similarly, if the step size too small (eta3), it requests the same number of step size as PV approach to achieve the global minima (-955.25) which results in a higher computational cost.
 
