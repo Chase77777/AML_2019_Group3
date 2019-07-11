@@ -22,9 +22,9 @@ The following variant of gradient descent have been used in our project.
 ## 2.1 Plain Vanilla
  No.|Eta| Converged Steps | Achieved Coordinates | Loss fn
 ------------ | ------------ | ----------- |------------- | -------------
-1|6.5 | 999 | (200.89,536.18) |-624.78
-2|0.3 | 231| (439.48,453.98) |-935.34 
-3|0.005 | 999| (419.41,434.65) |-860.87
+1|6.5 | 999 | (200.89, 536.18) |-624.78
+2|0.3 | 231| (439.48, 453.98) |-935.34 
+3|0.005 | 999| (419.41, 434.65) |-860.87
 ## 2.2 Momentum 
 Reference: https://medium.com/@hengluchang/visualizing-gradient-descent-with-momentum-in-python-7ef904c8a847
 
@@ -34,9 +34,9 @@ We first initialize our weights at (400.1,400.1) in the ravine loss surface (egg
 
  No.|Eta| Converged Steps | Achieved Coordinates | Loss fn
 ------------ | ------------ | ----------- |------------- | -------------
-1|1.5 | 115 | (347.33,499.42) |-888.95
-2|0.3 | 117| (439.48,453.98) |-935.34
-3|0.005 | 999| (439.1,453.98) |-935.31
+1|1.5 | 115 | (347.33, 499.42) |-888.95
+2|0.3 | 117| (439.48, 453.98) |-935.34
+3|0.005 | 999| (439.1, 453.98) |-935.31
 
 
 ## 2.3 Adam 
@@ -47,18 +47,18 @@ Based on results of our experiments, the Adam approach has much higher computati
 
  No.|Eta| Converged Steps | Achieved Coordinates | Loss fn
 ------------ | ------------ | ----------- |------------- | -------------
-1|10.5 | 216 | (439.48,453.98) |-935.34
-2|6.5 | 236| (439.48,453.98)  |-935.34
-3|0.5 | 773| (439.48,453.98)  |-935.34
+1|10.5 | 216 | (439.48, 453.98) |-935.34
+2|6.5 | 236| (439.48, 453.98)  |-935.34
+3|0.5 | 773| (439.48, 453.98)  |-935.34
 # 3. Conclusion
 ![3_in_one_gif](ezgif.com-video-to-gif.gif)
 ![3_in_one_graph](3_in_1_GD.png)
 
  Type of GD|Eta| Converged Steps | Achieved Coordinates | Loss fn
 ------------ | ------------ | ----------- |------------- | -------------
-Adam|0.3 |499 | (437.99,452.51)  |-934.91
-Momentum|0.3 |117| (439.48,453.98)   |-935.34
-Plain Vanilla|0.3| 231| (439.48,453.98)  |-935.34
+Adam|0.3 |499 | (437.99, 452.51)  |-934.91
+Momentum|0.3 |117| (439.48, 453.98)   |-935.34
+Plain Vanilla|0.3| 231| (439.48, 453.98)  |-935.34
 
 When we tried to plot 3 approaches (PV, Momentu, Adam) together with same learning rate 0.3 and initial point (400.1,400.1), we can conclude that Momentum has the best performance among other 2 methods. Momentum converged in 117 steps to reach the local minimum -935.33 whereas Adam preforms worse than PV which has the highest computational cost.
 
