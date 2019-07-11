@@ -28,3 +28,4 @@ The following variant of gradient descent have been used in our project.
 # 3. Experiement
 # 4. Conclusion
 
+![3_in_one_gif](ezgif.com-video-to-gif.gif)
