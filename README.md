@@ -20,8 +20,8 @@ This project aims to explore the global minimum of egg holder function with diff
 The following variant of gradient descent have been used in our project.
 
 ## 2.1 Plain Vanilla
-Eta| | Converged Steps | Achieved Coordinates | Loss fn
------------- | ----------- |------------- | -------------
+ |Eta| Converged Steps | Achieved Coordinates | Loss fn
+------------ | ------------ | ----------- |------------- | -------------
 Eta1|6.5 | 999 | (200.89,536.18) |-624.78
 Eta2|0.3 | 231| (439.48,453.98) |-935.34 
 Eta3|0.005 | 999| (419.41,434.65) |-860.87
