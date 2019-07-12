@@ -140,6 +140,8 @@ When we tried to plot **3 approaches (PV, Momentu, Adam)** together with same le
     Fig.5 - Gradient Descent Comparison Animation.
     <img src="ezgif.com-video-to-gif.gif" width="900" height="480"></p> 
 
+*From the animation above, we can observe that Momentum reach the minimum faster than Plain Vanilla and Adam. From our experiement with Adam, it perform better with bigger learning rate (e.g. 6.5 and above) however, when we set our learning rate at **0.3**, Adam took the longest time to reach the minimum point.*
+
 # 4. References
 
 #### 4.1. Eggholder function 
