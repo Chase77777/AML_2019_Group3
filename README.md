@@ -37,6 +37,14 @@ while a larger learning rate (step size) could cause us to miss the minima and b
      Fig.1 - Plain Vanilla Gradient Descent.
     <img src="Plain_Vanilla_GD.png" width="900" height="480"></p>
 
+**Plain Vanilla Experiment Result Table** 
+
+ No.|Eta| Converged Steps | Achieved Coordinates | Loss fn
+------------ | ------------ | ----------- |------------- | -------------
+1|6.5 | 999 | (200.89, 536.18) |-624.78
+2|0.3 | 231| (439.48, 453.98) |-935.34 
+3|0.005 | 999| (419.41, 434.65) |-860.87
+
 **Large Learning Rate (Left plot)** 
 Due to the large step size, the path taken bounced around and missed the true minimum. It seems needs more steps to locate the local minimum.
 
@@ -47,13 +55,6 @@ Here there was quite a smooth descend into the minimum. Achieving a minimised lo
 It achieves closer point at **-860.87**, however at a significantly slower pace with 999 iterations instead. This is due to the smaller step size. If we limited the iterations to 100, the algorithm would have stopped prematurely.
 
 
-**Plain Vanilla Experiment Result Table** 
-
- No.|Eta| Converged Steps | Achieved Coordinates | Loss fn
------------- | ------------ | ----------- |------------- | -------------
-1|6.5 | 999 | (200.89, 536.18) |-624.78
-2|0.3 | 231| (439.48, 453.98) |-935.34 
-3|0.005 | 999| (419.41, 434.65) |-860.87
 
 
 
