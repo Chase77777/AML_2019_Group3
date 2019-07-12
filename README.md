@@ -20,7 +20,8 @@ Reference: [Egg Holder Function Reference](https://www.sfu.ca/~ssurjano/egg.html
 
 
 # 2. Introduction
-This project aims to explore the global minimum of egg holder function with different gradient descent methods 
+
+This project is designed to experiment 3 different methods (Plain Vanilla, Momentum, Adam) on a two variables gradient descent function - Eggholder which has the large number of multiple local minimas. It applies 3 different learning rates on each model to achieve the best performance result. Then, it provides a comparison table and an annimation gif to illustrate the best model and its result for the Eggholder function based on the same parameters setting among the 3 gradient descent approaches. 
 
 The following variant of gradient descent have been used in our project.
 
@@ -75,6 +76,16 @@ Besides, if the stepsize set to be too large (eta1), although the gradient desce
 3|0.005 | 999| (439.1, 453.98) |-935.31
 
 
+**Large Learning Rate (Left plot)** 
+The path reaches to the converged point at the earliest as the large step size, however, it does not reach to the local minimum as the path taken bounced around and missed the true minimum.
+
+**Medium Learning Rate (Centre plot)**  
+Here there was quite a smooth descend into the minimum. Achieving a minimised loss function of -935.34 after 117 steps.
+
+**Small Learning Rate (Right plot)**  
+It achieves same local minimum point at -935.34, however at a significantly slower pace with 999 iterations instead. This is due to the smaller step size. If we limited the iterations to 100, the algorithm would have stopped prematurely.
+
+
 ## 2.3 Adam 
 
 Adaptive Moment Estimation (Adam) multiply a positive factor to the learning rate and moving averages of the gradient. In addition to storing an exponentially decaying average of past squared gradients vt, Adam also keeps an exponentially decaying average of past gradients mt similar to momentum. Whereas momentum can be seen as a ball running down a slope, Adam behaves like a heavy ball with friction, which thus prefers flat minima in the error surface We compute the decaying averages of past mt and past vt squared gradients. mt and vt are estimates of the first moment (the mean) and the second moment (the uncentered variance) of the gradients respectively, hence the name of the method. 
@@ -90,6 +101,16 @@ Based on results of our experiments, the Adam approach has much higher computati
 1|10.5 | 216 | (439.48, 453.98) |-935.34
 2|6.5 | 236| (439.48, 453.98)  |-935.34
 3|0.5 | 773| (439.48, 453.98)  |-935.34
+
+**Large Learning Rate (Left plot)** 
+The path reaches to the local minima point -935.34 at the earliest (216 steps) based on the large step size.
+
+**Medium Learning Rate (Centre plot)**  
+The path reaches to the same local minima point -935.34 with slightly slower pace (236 steps) compare to large step size.
+
+**Small Learning Rate (Right plot)**  
+It turns out that smaller step size causes significantly longer path to reach the local minima -935.34 with 773 steps.
+
 
 # 3. Conclusion
 ![3_in_one_gif](ezgif.com-video-to-gif.gif)
