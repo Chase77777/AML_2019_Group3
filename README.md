@@ -1,6 +1,8 @@
 # AML_2019 Coursework, Part 1, Group 3
 Gradient Descent for SMM284 An Introduction to Machine Learning 
 
+**For Gradient Descent in layman’s terms: <a href="Gradient Descent in layman’s terms.pdf">GD in layman's Terms.</a>**
+
 # 1. Egg Holder Function
 <p align="center">
     <img src="egg.png" alt="Egg Holder graph" /></p>
