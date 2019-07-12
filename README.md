@@ -113,8 +113,10 @@ It turns out that smaller step size causes significantly longer path to reach th
 
 
 # 3. Conclusion
-![3_in_one_gif](ezgif.com-video-to-gif.gif)
-![3_in_one_graph](3_in_1_GD.png)
+
+To conclude our experiment with gradient descent, we put Adam, Momentum and Plain Vanilla together and observe the performance. The result are recorded in the table and graph below.
+
+<p align="center"> <img src="3_in_1_GD.png" width="900" height="480"></p> 
 
 **Experiment Result Comparison Table** 
 
@@ -126,3 +128,4 @@ Plain Vanilla|0.3| 231| (439.48, 453.98)  |-935.34
 
 When we tried to plot 3 approaches (PV, Momentu, Adam) together with same learning rate 0.3 and initial point (400.1,400.1), we can conclude that Momentum has the best performance among other 2 methods. Momentum converged in 117 steps to reach the local minimum -935.33 whereas Adam preforms worse than PV which has the highest computational cost.
 
+<p align="center"> <img src="ezgif.com-video-to-gif.gif" width="900" height="480"></p> 
