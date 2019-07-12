@@ -21,16 +21,19 @@ Reference: [Egg Holder Function Reference](https://www.sfu.ca/~ssurjano/egg.html
 
 # 2. Introduction
 
-This project is designed to experiment 3 different methods (Plain Vanilla, Momentum, Adam) on a two variables gradient descent function - Eggholder which has the large number of multiple local minimas. It applies 3 different learning rates on each model to achieve the best performance result. Then, it provides a comparison table and an annimation gif to illustrate the best model and its result for the Eggholder function based on the same parameters setting among the 3 gradient descent approaches. 
+This project is designed to experiment 3 different methods **Plain Vanilla, Momentum, and Adam** on a two variables gradient descent function - Eggholder which has the large number of multiple local minimas. It applies 3 different learning rates on each model to achieve the best performance result. Then, it provides a comparison table and an annimation gif to illustrate the best model and its result for the Eggholder function based on the same parameters setting among the 3 gradient descent approaches. 
 
 The following variant of gradient descent have been used in our project.
 
 ## 2.1 Plain Vanilla
+
 Plain vanilla gradient descent that attempts to find the global minima by descending down each gradient.
 Note the learning rate, small learning rates means reaching the minima by small steps which can take longer time, 
 while a large learning rate (step size) could cause us to miss the minima and bounce around.
 
-<p align="center"> <img src="Plain_Vanilla_GD.png" width="900" height="480"></p>
+<p align="center">
+     Fig.1 - Plain Vanilla Gradient Descent.
+    <img src="Plain_Vanilla_GD.png" width="900" height="480"></p>
 
 **Large Learning Rate (Left plot)** 
 Due to the large step size, the path taken bounced around and missed the true minimum. It seems needs more steps to locate the local minimum.
@@ -54,10 +57,12 @@ It achieves closer point at -860.87, however at a significantly slower pace with
 
 ## 2.2 Momentum 
 
-
 Momentum (1964) make use of the moving averages of the gradient instead of just taking one value like in plain vanilla gradient descent. It can accumulate velocity in the direction where the gradient is pointing towards the same direction across iterations. It achieves this by adding a portion of the previous weight update to the current one.[Reference](https://medium.com/@hengluchang/visualizing-gradient-descent-with-momentum-in-python-7ef904c8a847)
 
-<p align="center"> <img src="Momentum_GD.png" width="900" height="480"></p>
+<p align="center"> 
+    Fig.2 - Momentum Gradient Descent.
+    <img src="Momentum_GD.png" width="900" height="480">
+</p>
 
 **Momentum Experiment Result Table** 
 
@@ -84,13 +89,13 @@ Then, we experiment with different learning rate for 1000 iterations and see how
 Compares to Plain Vanilla approach *(231 steps)*, it takes **114 less steps** to reach the global minima with **117 steps** under same learning rate **eta2 (0.3)**. This is due to momentum term increases for dimensions whose gradients point in the same directions and reduces updates for dimensions whose gradients change directions. As a result, it gains faster convergence and reduced oscillation. 
 
 
-
-
 ## 2.3 Adam 
 
 Adaptive Moment Estimation (Adam) multiply a positive factor to the learning rate and moving averages of the gradient. In addition to storing an exponentially decaying average of past squared gradients vt, Adam also keeps an exponentially decaying average of past gradients mt similar to momentum. Whereas momentum can be seen as a ball running down a slope, Adam behaves like a heavy ball with friction, which thus prefers flat minima in the error surface We compute the decaying averages of past mt and past vt squared gradients. mt and vt are estimates of the first moment (the mean) and the second moment (the uncentered variance) of the gradients respectively, hence the name of the method. 
 
-<p align="center"> <img src="Adam_GD.png" width="900" height="480"></p>
+<p align="center">
+    Fig.3 - Adam Gradient Descent.
+    <img src="Adam_GD.png" width="900" height="480"></p>
 
 **Adam Experiment Result Table** 
 
@@ -119,7 +124,9 @@ Based on results of our experiments, the Adam approach has much higher computati
 
 To conclude our experiment with gradient descent, we put Adam, Momentum and Plain Vanilla together and observe the performance. The result are recorded in the table and graph below.
 
-<p align="center"> <img src="3_in_1_GD.png" width="900" height="480"></p> 
+<p align="center"> 
+    Fig.4 - Gradient Descent Comparison.
+    <img src="3_in_1_GD.png" width="900" height="480"></p> 
 
 **Experiment Result Comparison Table** 
 
@@ -131,4 +138,6 @@ Plain Vanilla|0.3| 231| (439.48, 453.98)  |-935.34
 
 When we tried to plot 3 approaches (PV, Momentu, Adam) together with same learning rate 0.3 and initial point (400.1,400.1), we can conclude that Momentum has the best performance among other 2 methods. Momentum converged in 117 steps to reach the local minimum -935.33 whereas Adam preforms worse than PV which has the highest computational cost.
 
-<p align="center"> <img src="ezgif.com-video-to-gif.gif" width="900" height="480"></p> 
+<p align="center"> 
+    Fig.5 - Gradient Descent Comparison Animation.
+    <img src="ezgif.com-video-to-gif.gif" width="900" height="480"></p> 
