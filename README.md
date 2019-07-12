@@ -141,3 +141,50 @@ When we tried to plot 3 approaches (PV, Momentu, Adam) together with same learni
 <p align="center"> 
     Fig.5 - Gradient Descent Comparison Animation.
     <img src="ezgif.com-video-to-gif.gif" width="900" height="480"></p> 
+
+# 4. References
+
+#### 4.1. Eggholder function 
+- http://www.sfu.ca/~ssurjano/egg.html
+- https://www.robertmarks.org/Classes/ENGR5358/Papers/functions.pdf
+
+
+#### 4.2. Autograd 
+- http://www.cs.toronto.edu/~rgrosse/courses/csc321_2017/tutorials/tut4.pdf
+
+- https://github.com/HIPS/autograd/blob/master/docs/tutorial.md
+
+- http://videolectures.net/deeplearning2017_johnson_automatic_differentiation/
+
+
+#### 4.3. Plain Vanilla 
+- https://arxiv.org/pdf/1609.04747.pdf
+- https://github.com/alanchalk/aml_2019_gd/blob/master/gd.py
+
+
+#### 4.4. Adam
+
+- http://ruder.io/optimizing-gradient-descent/index.html#adam
+
+- https://towardsdatascience.com/10-gradient-descent-optimisation-algorithms-86989510b5e9
+
+- https://towardsdatascience.com/adam-latest-trends-in-deep-learning-optimization-6be9a291375c
+
+- https://github.com/alanchalk/aml_2019_gd/blob/master/gd.py
+
+
+#### 4.5. Momentum
+- https://medium.com/@hengluchang/visualizing-gradient-descent-with-momentum-in-python-7ef904c8a847
+
+- https://gluon.mxnet.io/chapter06_optimization/momentum-scratch.html
+
+- https://distill.pub/2017/momentum/
+
+- https://github.com/alanchalk/aml_2019_gd/blob/master/gd.py
+
+
+#### 4.6. Visualization
+
+- https://matplotlib.org/mpl_toolkits/mplot3d/tutorial.html
+
+- https://github.com/hengluchang/visualizing_momentum/blob/master/README.md
