@@ -3,6 +3,8 @@ Gradient Descent for SMM284 An Introduction to Machine Learning
 
 **For Gradient Descent in layman’s terms: <a href="Gradient Descent in layman’s terms.pdf">GD in layman's Terms.</a>**
 
+**To view our Gradient Descent Python code: <a href="MLQ1_Group_3.ipynb">Jupyter Notebook.</a>**
+
 # 1. Egg Holder Function
 <p align="center">
     <img src="egg.png" alt="Egg Holder graph" /></p>
