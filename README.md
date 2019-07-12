@@ -28,8 +28,8 @@ The following variant of gradient descent have been used in our project.
 ## 2.1 Plain Vanilla
 
 Plain vanilla gradient descent that attempts to find the global minima by descending down each gradient.
-Note the learning rate, small learning rates means reaching the minima by small steps which can take longer time, 
-while a large learning rate (step size) could cause us to miss the minima and bounce around.
+Note on the learning rate, smaller learning rates means reaching the minima by a smaller steps which can take a longer time, 
+while a larger learning rate (step size) could cause us to miss the minima and bounce around.
 
 <p align="center">
      Fig.1 - Plain Vanilla Gradient Descent.
@@ -42,7 +42,7 @@ Due to the large step size, the path taken bounced around and missed the true mi
 Here there was quite a smooth descend into the minimum. Achieving a minimised loss function of -935.34 after 231 steps
 
 **Small Learning Rate (Right plot)** 
-It achieves closer point at -860.87, however at a significantly slower pace with 999 iterations instead. This is due to the smaller step size. If we limited the iterations to 100, the algorithm would have stopped prematurely.
+It achieves closer point at **-860.87**, however at a significantly slower pace with 999 iterations instead. This is due to the smaller step size. If we limited the iterations to 100, the algorithm would have stopped prematurely.
 
 
 **Plain Vanilla Experiment Result Table** 
@@ -84,7 +84,7 @@ It achieves same local minimum point at -935.34, however at a significantly slow
 
 We first initialize our weights at **(400.1,400.1)** in the ravine loss surface (*Egg holder Function*). 
 
-Then, we experiment with different learning rate for 1000 iterations and see how it reach to the global minimum **f(x)=-959.64, at x = (512, 404.23)**. 
+Then, we experiment with different learning rate for **1000** iterations and see how it reach to the global minimum **f(x)=-959.64, at x = (512, 404.23)**. 
 
 Compares to Plain Vanilla approach *(231 steps)*, it takes **114 less steps** to reach the global minima with **117 steps** under same learning rate **eta2 (0.3)**. This is due to momentum term increases for dimensions whose gradients point in the same directions and reduces updates for dimensions whose gradients change directions. As a result, it gains faster convergence and reduced oscillation. 
 
@@ -106,18 +106,16 @@ Adaptive Moment Estimation (Adam) multiply a positive factor to the learning rat
 3|0.5 | 773| (439.48, 453.98)  |-935.34
 
 **Large Learning Rate (Left plot)** 
-The path reaches to the local minima point -935.34 at the earliest (216 steps) based on the large step size.
+The path reaches to the local minima point **-935.34** at the earliest **(216 steps)** based on the large step size.
 
 **Medium Learning Rate (Centre plot)**  
-The path reaches to the same local minima point -935.34 with slightly slower pace (236 steps) compare to large step size.
+The path reaches to the same local minima point **-935.34** with slightly slower pace **(236 steps)** compare to large step size.
 
 **Small Learning Rate (Right plot)**  
-It turns out that smaller step size causes significantly longer path to reach the local minima -935.34 with 773 steps.
+It turns out that smaller step size causes significantly longer path to reach the local minima **-935.34** with **773 steps**.
 
 
-Based on results of our experiments, the Adam approach has much higher computational cost compare to Momentum. With the same learning rate eta1(6.5) eta2(0.3） eta3（0.005) and same initialised weights at (400.1,400.1), it takes 1894 steps to reach the same global minima(-935.33) whereas momentum only takes 117 steps. This might due to the complication of the Egg holder surface contains multi-minima bottom points.
-
-
+Based on results of our experiments, the Adam approach has much higher computational cost compare to Momentum. With the same learning rate **eta1(6.5) eta2(0.3）and eta3（0.005)**, with same initialised weights at **(400.1,400.1)**, it takes **1894** steps to reach the same global minima **(-935.33)** whereas *Momentum* only takes **117 steps**. This might due to the complication of the Egg holder surface contains multi-minima bottom points.
 
 
 # 3. Conclusion
@@ -136,7 +134,7 @@ Adam|0.3 |499 | (437.99, 452.51)  |-934.91
 Momentum|0.3 |117| (439.48, 453.98)   |-935.34
 Plain Vanilla|0.3| 231| (439.48, 453.98)  |-935.34
 
-When we tried to plot 3 approaches (PV, Momentu, Adam) together with same learning rate 0.3 and initial point (400.1,400.1), we can conclude that Momentum has the best performance among other 2 methods. Momentum converged in 117 steps to reach the local minimum -935.33 whereas Adam preforms worse than PV which has the highest computational cost.
+When we tried to plot **3 approaches (PV, Momentu, Adam)** together with same learning rate **0.3** and initial point **(400.1,400.1)**, we can conclude that *Momentum* has the best performance among other 2 methods. Momentum converged in **117** steps to reach the local minimum **-935.33** whereas Adam preforms worse than PV which has the highest computational cost.
 
 <p align="center"> 
     Fig.5 - Gradient Descent Comparison Animation.
