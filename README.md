@@ -191,3 +191,5 @@ When we tried to plot **3 approaches (PV, Momentu, Adam)** together with same le
 - https://matplotlib.org/mpl_toolkits/mplot3d/tutorial.html
 
 - https://github.com/hengluchang/visualizing_momentum/blob/master/README.md
+
+- http://louistiao.me/notes/visualizing-and-animating-optimization-algorithms-with-matplotlib/¶
